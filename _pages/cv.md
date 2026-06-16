@@ -10,20 +10,36 @@ redirect_from:
 {% include base_path %}
 
 <style>
-.cv-page {
+html {
+  scroll-behavior: smooth;
+}
+
+.sw-page {
+  max-width: 880px;
+  margin: 0 auto;
   color: #2f3437;
 }
 
-.cv-hero {
-  margin: 10px 0 34px 0;
-  padding: 30px 34px;
-  border-radius: 24px;
-  background: linear-gradient(135deg, #f8fafc 0%, #eef7fb 48%, #ffffff 100%);
-  border: 1px solid #e6eef3;
-  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.10);
+.sw-page a {
+  color: #2f80a0 !important;
+  font-weight: 700;
+  text-decoration: none;
 }
 
-.cv-kicker {
+.sw-page a:hover {
+  text-decoration: underline;
+}
+
+.sw-hero {
+  margin: 8px 0 26px 0;
+  padding: 26px 28px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef7fb 48%, #ffffff 100%);
+  border: 1px solid #e5edf3;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+.sw-kicker {
   color: #2f80a0;
   font-weight: 800;
   font-size: 13px;
@@ -32,105 +48,90 @@ redirect_from:
   margin-bottom: 8px;
 }
 
-.cv-hero h1 {
-  font-size: 36px;
-  line-height: 1.2;
+.sw-hero h1 {
   margin: 0 0 12px 0;
   color: #2f3437;
+  font-size: 34px;
+  line-height: 1.18;
 }
 
-.cv-hero p {
-  font-size: 16px;
-  line-height: 1.75;
+.sw-hero p {
   color: #4b5563;
-  margin: 0;
+  line-height: 1.75;
+  margin: 10px 0 0 0;
 }
 
-.cv-nav {
+.sw-nav {
   position: sticky;
   top: 0;
-  z-index: 10;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 0 0 32px 0;
-  padding: 12px;
-  border-radius: 18px;
+  z-index: 20;
+  margin: 18px 0 30px 0;
+  padding: 10px 12px;
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid #e5e7eb;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
   backdrop-filter: blur(8px);
 }
 
-.cv-nav a {
+.sw-nav a {
   display: inline-block;
-  padding: 8px 13px;
+  margin: 4px 7px 4px 0;
+  padding: 7px 12px;
   border-radius: 999px;
-  color: #2f80a0;
-  background: #eef7fb;
-  text-decoration: none;
+  background: #f8fafc;
+  color: #2f80a0 !important;
   font-size: 13px;
   font-weight: 800;
+  border: 1px solid #e5e7eb;
 }
 
-.cv-nav a:hover {
-  background: #2f80a0;
-  color: #ffffff;
-}
-
-.cv-section-title {
-  margin-top: 42px;
-  margin-bottom: 18px;
-  font-size: 25px;
+.sw-section-title {
+  margin-top: 38px;
+  margin-bottom: 16px;
+  font-size: 24px;
   color: #2f3437;
   border-bottom: 1px solid #e5e7eb;
   padding-bottom: 8px;
 }
 
-.cv-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 16px;
-}
-
-.cv-card,
-.cv-pub-card,
-.cv-activity-card {
-  padding: 20px 22px;
-  border-radius: 18px;
-  background: #ffffff;
-  border: 1px solid #edf2f7;
-  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.07);
-}
-
-.cv-card h3,
-.cv-pub-card h3,
-.cv-activity-card h3 {
-  margin: 0 0 8px 0;
-  color: #2f3437;
+.sw-subtitle {
+  margin: 24px 0 10px 0;
+  color: #2f80a0;
   font-size: 18px;
 }
 
-.cv-card p,
-.cv-pub-card p,
-.cv-activity-card p {
+.sw-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.sw-card,
+.sw-list-card {
+  padding: 18px 20px;
+  border-radius: 17px;
+  background: #ffffff;
+  border: 1px solid #edf2f7;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.055);
+}
+
+.sw-card h3,
+.sw-list-card h3 {
+  margin: 0 0 9px 0;
+  color: #2f3437;
+  font-size: 17px;
+}
+
+.sw-card p,
+.sw-list-card p {
   margin: 6px 0;
   color: #4b5563;
-  line-height: 1.65;
+  line-height: 1.64;
 }
 
-.cv-pub-card {
-  margin-bottom: 16px;
-  border-left: 5px solid #2f80a0;
-}
-
-.cv-pub-meta {
-  color: #6b7280;
-  font-size: 14px;
-}
-
-.cv-badge {
+.sw-badge {
   display: inline-block;
   padding: 6px 11px;
   margin: 4px 6px 4px 0;
@@ -141,101 +142,145 @@ redirect_from:
   font-weight: 800;
 }
 
-.cv-list-card {
-  padding: 20px 22px;
-  border-radius: 18px;
-  background: #ffffff;
-  border: 1px solid #edf2f7;
-  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.07);
-}
-
-.cv-list-card ul {
+.sw-list-card ul {
   margin: 0;
   padding-left: 20px;
 }
 
-.cv-list-card li {
-  margin: 9px 0;
+.sw-list-card li {
+  margin: 8px 0;
   color: #4b5563;
-  line-height: 1.65;
+  line-height: 1.62;
 }
 
-.cv-link-group {
-  padding: 19px 21px;
-  border-radius: 18px;
+.pub-list {
+  margin: 6px 0 0 0;
+  padding-left: 22px;
+}
+
+.pub-list li {
+  margin: 10px 0;
+  padding-left: 4px;
+  color: #4b5563;
+  line-height: 1.62;
+}
+
+.pub-list em {
+  color: #374151;
+}
+
+.pub-note {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.timeline {
+  margin-top: 12px;
+  border-left: 3px solid #dbeaf0;
+  padding-left: 18px;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 0 0 16px 0;
+  padding: 14px 16px;
+  border-radius: 16px;
   background: #ffffff;
   border: 1px solid #edf2f7;
-  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.07);
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.055);
 }
 
-.cv-link-group h3 {
-  margin: 0 0 10px 0;
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -27px;
+  top: 19px;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #2f80a0;
+  border: 3px solid #eef7fb;
+}
+
+.timeline-date {
   color: #2f80a0;
-  font-size: 18px;
+  font-weight: 900;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
-.cv-link-group a,
-.cv-pub-card a,
-.cv-activity-card a {
-  color: #2f80a0;
-  font-weight: 700;
-  text-decoration: none;
+.timeline-item p {
+  margin: 5px 0;
+  color: #4b5563;
+  line-height: 1.64;
 }
 
-.cv-link-group a:hover,
-.cv-pub-card a:hover,
-.cv-activity-card a:hover {
-  text-decoration: underline;
-}
-
-.cv-floating {
+.sw-floating {
   position: fixed;
   right: 22px;
   bottom: 22px;
+  z-index: 999;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  z-index: 50;
 }
 
-.cv-floating a {
+.sw-floating a {
   width: 42px;
   height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
+  border-radius: 999px;
   background: #2f80a0;
-  color: #ffffff;
-  text-decoration: none;
+  color: #ffffff !important;
+  text-align: center;
+  line-height: 42px;
   font-weight: 900;
-  box-shadow: 0 8px 18px rgba(47, 128, 160, 0.28);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18);
+}
+
+.sw-floating a.secondary {
+  background: #ffffff;
+  color: #2f80a0 !important;
+  border: 1px solid #2f80a0;
 }
 
 @media (max-width: 768px) {
-  .cv-hero {
-    padding: 24px;
+  .sw-page {
+    max-width: 100%;
   }
 
-  .cv-hero h1 {
-    font-size: 30px;
+  .sw-hero {
+    padding: 22px;
   }
 
-  .cv-grid {
+  .sw-hero h1 {
+    font-size: 28px;
+  }
+
+  .sw-nav {
+    position: static;
+  }
+
+  .sw-grid {
     grid-template-columns: 1fr;
   }
 
-  .cv-floating {
+  .sw-floating {
     right: 14px;
     bottom: 14px;
+  }
+
+  .sw-floating a {
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
   }
 }
 </style>
 
-<div class="cv-page" id="top">
+<div class="sw-page" id="top">
 
-  <div class="cv-hero">
-    <div class="cv-kicker">Curriculum Vitae · Publications · Academic Activities</div>
+  <div class="sw-hero">
+    <div class="sw-kicker">Curriculum Vitae · Publications · Academic Activities</div>
     <h1>Song Wang</h1>
     <p>
       Ph.D. student at Chiba University, Japan. My research focuses on dependable computing,
@@ -243,240 +288,204 @@ redirect_from:
     </p>
   </div>
 
-  <div class="cv-nav">
+  <div class="sw-nav">
     <a href="#education">Education</a>
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#publications">Publications</a>
     <a href="#activities">Activities</a>
-    <a href="#service">Service</a>
-    <a href="#academic-links">Academic Links</a>
   </div>
 
-  <h2 class="cv-section-title" id="education">Education</h2>
-  <div class="cv-grid">
-    <div class="cv-card">
+  <h2 class="sw-section-title" id="education">Education</h2>
+  <div class="sw-grid">
+    <div class="sw-card">
       <h3>Doctor of Engineering in Informatics</h3>
       <p><strong>Chiba University, Japan</strong></p>
       <p>Oct. 2025–present</p>
     </div>
-    <div class="cv-card">
+    <div class="sw-card">
       <h3>Master of Engineering in Applied and Cognitive Informatics</h3>
       <p><strong>Chiba University, Japan</strong></p>
       <p>Oct. 2023–Sep. 2025</p>
     </div>
   </div>
 
-  <h2 class="cv-section-title" id="experience">Research & Work Experience</h2>
-  <div class="cv-grid">
-    <div class="cv-card">
+  <h2 class="sw-section-title" id="experience">Research &amp; Work Experience</h2>
+  <div class="sw-grid">
+    <div class="sw-card">
       <h3>Research Assistant</h3>
       <p><strong>Informatics, Chiba University, Japan</strong></p>
       <p>Oct. 2025–Mar. 2026</p>
     </div>
-    <div class="cv-card">
+    <div class="sw-card">
       <h3>Research Student</h3>
       <p><strong>Information Engineering, Chiba University, Japan</strong></p>
       <p>Apr. 2023–Sep. 2023</p>
     </div>
   </div>
 
-  <h2 class="cv-section-title" id="skills">Skills</h2>
-  <div class="cv-grid">
-    <div class="cv-list-card">
+  <h2 class="sw-section-title" id="skills">Skills</h2>
+  <div class="sw-grid">
+    <div class="sw-list-card">
       <h3>Languages</h3>
       <ul>
         <li>English: TOEIC 755, Jul. 2022</li>
         <li>Japanese: JLPT N2, Jan. 2020</li>
       </ul>
     </div>
-    <div class="cv-list-card">
+    <div class="sw-list-card">
       <h3>Programming</h3>
       <p>
-        <span class="cv-badge">C/C++</span>
-        <span class="cv-badge">Python</span>
-        <span class="cv-badge">Verilog HDL</span>
-        <span class="cv-badge">Shell</span>
-        <span class="cv-badge">Makefile</span>
+        <span class="sw-badge">C/C++</span>
+        <span class="sw-badge">Python</span>
+        <span class="sw-badge">Verilog HDL</span>
+        <span class="sw-badge">Shell</span>
+        <span class="sw-badge">Makefile</span>
       </p>
     </div>
-    <div class="cv-list-card">
-      <h3>EDA & Design Tools</h3>
+    <div class="sw-list-card">
+      <h3>EDA &amp; Design Tools</h3>
       <p>
-        <span class="cv-badge">Synopsys HSPICE</span>
-        <span class="cv-badge">Cadence Virtuoso</span>
-        <span class="cv-badge">Siemens Calibre</span>
-        <span class="cv-badge">AMD Vivado</span>
-        <span class="cv-badge">KiCad</span>
+        <span class="sw-badge">Synopsys HSPICE</span>
+        <span class="sw-badge">Cadence Virtuoso</span>
+        <span class="sw-badge">Siemens Calibre</span>
+        <span class="sw-badge">AMD Vivado</span>
+        <span class="sw-badge">KiCad</span>
       </p>
     </div>
-    <div class="cv-list-card">
+    <div class="sw-list-card">
       <h3>Platforms</h3>
-      <p><span class="cv-badge">Linux</span></p>
+      <p><span class="sw-badge">Linux</span></p>
     </div>
   </div>
 
-  <h2 class="cv-section-title" id="publications">Publications</h2>
+  <h2 class="sw-section-title" id="publications">Publications</h2>
 
-  <h3>Journal Articles</h3>
-  <div class="cv-pub-card">
-    <h3>Analysis of a Delay-Element-Based Technique for Enhancing Soft Error Tolerance at Input Nodes Around Clock Edges</h3>
-    <p><strong>Song Wang</strong> and Kazuteru Namba</p>
-    <p><em>IEEE Transactions on Very Large Scale Integration (VLSI) Systems</em>, vol. 34, no. 3, pp. 1017–1028, Mar. 2026.</p>
-    <p class="cv-pub-meta">DOI: <a href="https://doi.org/10.1109/TVLSI.2025.3643939">10.1109/TVLSI.2025.3643939</a></p>
-  </div>
+  <h3 class="sw-subtitle">Journal Articles</h3>
+  <ol class="pub-list">
+    <li>
+      <strong>Song Wang</strong> and Kazuteru Namba, “Analysis of a Delay-Element-Based Technique for Enhancing Soft Error Tolerance at Input Nodes Around Clock Edges,”
+      <em>IEEE Transactions on Very Large Scale Integration (VLSI) Systems</em>, vol. 34, no. 3, pp. 1017–1028, Mar. 2026.
+      DOI: <a href="https://doi.org/10.1109/TVLSI.2025.3643939">10.1109/TVLSI.2025.3643939</a>.
+    </li>
+    <li>
+      <strong>Song Wang</strong>, Xiangqing Wei, Ji Wu, and Kazuteru Namba, “C-Element-Based Latch with DNU Tolerance and SET Resilience Around Clock Edges,”
+      <em>Nonlinear Theory and Its Applications, IEICE</em>, to appear.
+    </li>
+    <li>
+      Xiangqing Wei, Ji Wu, <strong>Song Wang</strong>, Yun-Ju Baek, and Kazuteru Namba, “Structure-Aware Tile-Level Scheduling for Irregular CNNs on PE-Array Accelerators,”
+      <em>Nonlinear Theory and Its Applications, IEICE</em>, to appear.
+    </li>
+  </ol>
 
-  <div class="cv-pub-card">
-    <h3>C-Element-Based Latch with DNU Tolerance and SET Resilience Around Clock Edges</h3>
-    <p><strong>Song Wang</strong>, Xiangqing Wei, Ji Wu, and Kazuteru Namba</p>
-    <p><em>Nonlinear Theory and Its Applications, IEICE</em>, to appear.</p>
-  </div>
+  <h3 class="sw-subtitle">International Conference Papers</h3>
+  <ol class="pub-list">
+    <li>
+      <strong>Song Wang</strong>, Ji Wu, Xiangqing Wei, and Kazuteru Namba, “A Delay-Elements-Centric Multi-Path Temporal Dispersion Structure for MNU-Tolerant Latch Design,”
+      <em>2026 IEEE 15th International Conference on Communications, Circuits and Systems (ICCCAS)</em>, accepted.
+    </li>
+    <li>
+      Ji Wu, Xiangqing Wei, <strong>Song Wang</strong>, and Kazuteru Namba, “XAI-Driven Semantic Decoupling for NPU Fault Injection,”
+      <em>2026 IEEE 15th International Conference on Communications, Circuits and Systems (ICCCAS)</em>, accepted.
+    </li>
+    <li>
+      <strong>Song Wang</strong> and Kazuteru Namba, “A Double-Node-Upset Self-Recoverable Latch with Soft Error Tolerance to Soft Errors Around Clock Edges,”
+      <em>2026 IEEE 2nd International Conference on Consumer Technology – Pacific (ICCT-Pacific)</em>, Yoshida, Yamaguchi-shi, Japan, Mar. 2026, pp. 239–242.
+      DOI: <a href="https://doi.org/10.1109/ICCT-Pacific69083.2026.11518797">10.1109/ICCT-Pacific69083.2026.11518797</a>.
+    </li>
+    <li>
+      <strong>Song Wang</strong> and Kazuteru Namba, “C-Element-Based Latch for Flip-Flops: Complete SNU and Partial DNU Tolerance and Resilience to Soft Errors Around Clock Edges,”
+      <em>2025 1st International Conference on Consumer Technology – Pacific (ICCT-Pacific)</em>, Matsue, Japan, Mar. 2025.
+      DOI: <a href="https://doi.org/10.1109/ICCT-Pacific63901.2025.11012884">10.1109/ICCT-Pacific63901.2025.11012884</a>.
+    </li>
+    <li>
+      <strong>Song Wang</strong> and Kazuteru Namba, “A Master-Slave Flip-Flop with Double-Node-Upset Self-Recovery and Soft Error Tolerance Around Clock Edges,”
+      <em>2024 International Conference on Consumer Electronics – Taiwan (ICCE-Taiwan)</em>, Taichung, Taiwan, Jul. 2024.
+      DOI: <a href="https://doi.org/10.1109/ICCE-Taiwan62264.2024.10674496">10.1109/ICCE-Taiwan62264.2024.10674496</a>.
+    </li>
+  </ol>
 
-  <div class="cv-pub-card">
-    <h3>Structure-Aware Tile-Level Scheduling for Irregular CNNs on PE-Array Accelerators</h3>
-    <p>Xiangqing Wei, Ji Wu, <strong>Song Wang</strong>, Yun-Ju Baek, and Kazuteru Namba</p>
-    <p><em>Nonlinear Theory and Its Applications, IEICE</em>, to appear.</p>
-  </div>
+  <h3 class="sw-subtitle">Domestic Workshops and Technical Reports</h3>
+  <ol class="pub-list">
+    <li>
+      <strong>Song Wang</strong> and Kazuteru Namba, “A C-Element-Based Latch Design for Flip-Flops with Complete SNU and Partial DNU Tolerance and Enhanced Soft Error Resilience Around Clock Edges,”
+      <em>IEICE Technical Report</em>, DC2024-113, Tokyo, Japan, Feb. 2025.
+    </li>
+    <li>
+      <strong>Song Wang</strong> and Kazuteru Namba, “Critical Charge Measurements Around Falling Edge of Clock Signal for D Flip-Flops,”
+      <em>FTC Workshop</em>, Hiroshima, Japan, Jan. 2024.
+    </li>
+  </ol>
 
-  <h3>International Conference Papers</h3>
-  <div class="cv-pub-card">
-    <h3>A Delay-Elements-Centric Multi-Path Temporal Dispersion Structure for MNU-Tolerant Latch Design</h3>
-    <p><strong>Song Wang</strong>, Ji Wu, Xiangqing Wei, and Kazuteru Namba</p>
-    <p><em>2026 IEEE 15th International Conference on Communications, Circuits and Systems (ICCCAS)</em>, accepted.</p>
-  </div>
+  <p class="pub-note">
+    Professional service, memberships, author profiles, and frequently used academic links are summarized on the homepage.
+  </p>
 
-  <div class="cv-pub-card">
-    <h3>XAI-Driven Semantic Decoupling for NPU Fault Injection</h3>
-    <p>Ji Wu, Xiangqing Wei, <strong>Song Wang</strong>, and Kazuteru Namba</p>
-    <p><em>2026 IEEE 15th International Conference on Communications, Circuits and Systems (ICCCAS)</em>, accepted.</p>
-  </div>
+  <h2 class="sw-section-title" id="activities">Academic Activities and Presentations</h2>
 
-  <div class="cv-pub-card">
-    <h3>A Double-Node-Upset Self-Recoverable Latch with Soft Error Tolerance to Soft Errors Around Clock Edges</h3>
-    <p><strong>Song Wang</strong> and Kazuteru Namba</p>
-    <p><em>2026 IEEE 2nd International Conference on Consumer Technology – Pacific (ICCT-Pacific)</em>, Yoshida, Yamaguchi-shi, Japan, Mar. 2026, pp. 239–242.</p>
-    <p class="cv-pub-meta">DOI: <a href="https://doi.org/10.1109/ICCT-Pacific69083.2026.11518797">10.1109/ICCT-Pacific69083.2026.11518797</a></p>
-  </div>
-
-  <div class="cv-pub-card">
-    <h3>C-Element-Based Latch for Flip-Flops: Complete SNU and Partial DNU Tolerance and Resilience to Soft Errors Around Clock Edges</h3>
-    <p><strong>Song Wang</strong> and Kazuteru Namba</p>
-    <p><em>2025 1st International Conference on Consumer Technology – Pacific (ICCT-Pacific)</em>, Matsue, Japan, Mar. 2025.</p>
-    <p class="cv-pub-meta">DOI: <a href="https://doi.org/10.1109/ICCT-Pacific63901.2025.11012884">10.1109/ICCT-Pacific63901.2025.11012884</a></p>
-  </div>
-
-  <div class="cv-pub-card">
-    <h3>A Master-Slave Flip-Flop with Double-Node-Upset Self-Recovery and Soft Error Tolerance Around Clock Edges</h3>
-    <p><strong>Song Wang</strong> and Kazuteru Namba</p>
-    <p><em>2024 International Conference on Consumer Electronics – Taiwan (ICCE-Taiwan)</em>, Taichung, Taiwan, Jul. 2024.</p>
-    <p class="cv-pub-meta">DOI: <a href="https://doi.org/10.1109/ICCE-Taiwan62264.2024.10674496">10.1109/ICCE-Taiwan62264.2024.10674496</a></p>
-  </div>
-
-  <h3>Domestic Workshops and Technical Reports</h3>
-  <div class="cv-pub-card">
-    <h3>A C-Element-Based Latch Design for Flip-Flops with Complete SNU and Partial DNU Tolerance and Enhanced Soft Error Resilience Around Clock Edges</h3>
-    <p><strong>Song Wang</strong> and Kazuteru Namba</p>
-    <p><em>IEICE Technical Report</em>, DC2024-113, Tokyo, Japan, Feb. 2025.</p>
-  </div>
-
-  <div class="cv-pub-card">
-    <h3>Critical Charge Measurements Around Falling Edge of Clock Signal for D Flip-Flops</h3>
-    <p><strong>Song Wang</strong> and Kazuteru Namba</p>
-    <p><em>FTC Workshop</em>, Hiroshima, Japan, Jan. 2024.</p>
-  </div>
-
-  <h2 class="cv-section-title" id="activities">Academic Activities and Presentations</h2>
-
-  <div class="cv-activity-card">
-    <h3>Asia Student Workshop on Information and Image Science</h3>
-    <p>Teaching Assistant, “Let’s Try Simulating Computations Performed in Image Processing FPGA,” Chiba, Japan, Mar. 2026.</p>
-  </div>
-
-  <div class="cv-activity-card">
-    <h3>IEEE CAS Chiba Workshop</h3>
-    <p><strong>Song Wang</strong>, “Delay-Element-Based Soft-Error-Tolerant Latch with SET Tolerance at Input Nodes Around Clock Edges,” Chiba, Japan, Dec. 2025.</p>
-  </div>
-
-  <div class="cv-activity-card">
-    <h3>SEMICON Japan Academia Area</h3>
-    <p>Exhibitor, Computer Systems Laboratory, Chiba University, Tokyo, Japan, Dec. 2025.</p>
-  </div>
-
-  <div class="cv-activity-card">
-    <h3>The 11th Soft Error Workshop: Radiation Effects in Semiconductors</h3>
-    <p><strong>Song Wang</strong> and Kazuteru Namba, “A Delay-Element-Based Latch for Flip-Flops with Recovery from Double-Node Upsets and Tolerance to Soft Errors Around Clock Edges,” Fukuoka, Japan, Sep. 2025.</p>
-  </div>
-
-  <div class="cv-activity-card">
-    <h3>Asia Student Workshop on Information and Image Science</h3>
-    <p>Teaching Assistant, “Let’s Try Simulating Computations Performed in Image Processing FPGA,” Chiba, Japan, Mar. 2025.</p>
-  </div>
-
-  <div class="cv-activity-card">
-    <h3>SEMICON Japan Academia Area</h3>
-    <p>Exhibitor, Namba Laboratory, Chiba University, Tokyo, Japan, Dec. 2024.</p>
-  </div>
-
-  <div class="cv-activity-card">
-    <h3>SEMICON Japan Academia Area</h3>
-    <p>Exhibitor, Namba Laboratory, Chiba University, “Namba Laboratory and Chips,” Tokyo, Japan, Dec. 2023.</p>
-  </div>
-
-  <h2 class="cv-section-title" id="service">Professional Service and Memberships</h2>
-  <div class="cv-grid">
-    <div class="cv-card">
-      <h3>Membership</h3>
-      <p>Graduate Student Member, Institute of Electrical and Electronics Engineers (IEEE).</p>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-date">Mar. 2026</div>
+      <p>
+        Teaching Assistant, “Let’s Try Simulating Computations Performed in Image Processing FPGA,”
+        <em>Asia Student Workshop (ASW) on Information and Image Science</em>, Chiba, Japan.
+      </p>
     </div>
-    <div class="cv-card">
-      <h3>Reviewer</h3>
-      <p><a href="https://mc.manuscriptcentral.com/tcas1">IEEE Transactions on Circuits and Systems I: Regular Papers</a></p>
-      <p><a href="https://mc.manuscriptcentral.com/tvlsi-ieee">IEEE Transactions on Very Large Scale Integration (VLSI) Systems</a></p>
-      <p><a href="https://link.springer.com/journal/10836">Journal of Electronic Testing: Theory and Applications</a></p>
-    </div>
-  </div>
 
-  <h2 class="cv-section-title" id="academic-links">Academic Links</h2>
-  <div class="cv-grid">
-    <div class="cv-link-group">
-      <h3>Author Profiles</h3>
-      <p><a href="https://orcid.org/0009-0000-7572-7800">ORCID</a></p>
-      <p><a href="https://www.scopus.com/authid/detail.uri?authorId=59358445800">Scopus Author Profile</a></p>
-      <p><a href="https://www.webofscience.com/wos/author/record/PHO-3537-2026">Web of Science Researcher Profile</a></p>
-      <p><a href="https://ieeexplore.ieee.org/author/704888443148980">IEEE Xplore Author Profile</a></p>
+    <div class="timeline-item">
+      <div class="timeline-date">Dec. 2025</div>
+      <p>
+        <strong>Song Wang</strong>, “Delay-Element-Based Soft-Error-Tolerant Latch with SET Tolerance at Input Nodes Around Clock Edges,”
+        <em>IEEE CAS Chiba Workshop</em>, Chiba, Japan.
+      </p>
     </div>
-    <div class="cv-link-group">
-      <h3>Professional Societies</h3>
-      <p><a href="https://www.ieee.org/">IEEE</a></p>
-      <p><a href="https://www.computer.org/">IEEE Computer Society</a></p>
-      <p><a href="https://ieee-cas.org/">IEEE Circuits and Systems Society</a></p>
-      <p><a href="https://sscs.ieee.org/">IEEE Solid-State Circuits Society</a></p>
-      <p><a href="https://ieee-ceda.org/">IEEE Council on Electronic Design Automation</a></p>
-    </div>
-    <div class="cv-link-group">
-      <h3>IEICE</h3>
-      <p><a href="https://www.ieice.org/">IEICE</a></p>
-      <p><a href="https://www.ieice.org/iss/iss_r/eng/index.php">Information and Systems Society</a></p>
-      <p><a href="https://www.ieice.org/nolta/index.php">NOLTA Society</a></p>
-      <p><a href="https://www.ieice.org/iss/dc/jpn/">Dependable Computing Technical Committee</a></p>
-      <p><a href="https://globals.ieice.org/">IEICE Digital Library</a></p>
-      <p><a href="https://review.ieice.org/index_e.aspx">IEICE Information on Status of Each Paper</a></p>
-    </div>
-    <div class="cv-link-group">
-      <h3>Chiba University and Research Infrastructure</h3>
-      <p><a href="https://www.chiba-u.ac.jp/">Chiba University</a></p>
-      <p><a href="https://informatics.chiba-u.jp/">Graduate School of Informatics</a></p>
-      <p><a href="https://www.se.chiba-u.jp/">Graduate School of Science and Engineering</a></p>
-      <p><a href="http://www.icsd2.tj.chiba-u.jp/">Kitakami & Namba Laboratory</a></p>
-      <p><a href="http://www.vdec.u-tokyo.ac.jp/">VDEC</a></p>
-    </div>
-  </div>
 
-  <div class="cv-floating">
-    <a href="#top" aria-label="Back to top">↑</a>
-    <a href="#bottom" aria-label="Go to bottom">↓</a>
+    <div class="timeline-item">
+      <div class="timeline-date">Dec. 2025</div>
+      <p>
+        Exhibitor, Computer Systems Laboratory, Chiba University,
+        <em>SEMICON Japan Academia Area</em>, Tokyo, Japan.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">Sep. 2025</div>
+      <p>
+        <strong>Song Wang</strong> and Kazuteru Namba, “A Delay-Element-Based Latch for Flip-Flops with Recovery from Double-Node Upsets and Tolerance to Soft Errors Around Clock Edges,”
+        <em>The 11th Soft Error Workshop: Radiation Effects in Semiconductors</em>, Fukuoka, Japan.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">Mar. 2025</div>
+      <p>
+        Teaching Assistant, “Let’s Try Simulating Computations Performed in Image Processing FPGA,”
+        <em>Asia Student Workshop (ASW) on Information and Image Science</em>, Chiba, Japan.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">Dec. 2024</div>
+      <p>
+        Exhibitor, Namba Laboratory, Chiba University,
+        <em>SEMICON Japan Academia Area</em>, Tokyo, Japan.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">Dec. 2023</div>
+      <p>
+        Exhibitor, Namba Laboratory, Chiba University, “Namba Laboratory and Chips,”
+        <em>SEMICON Japan Academia Area</em>, Tokyo, Japan.
+      </p>
+    </div>
   </div>
 
   <div id="bottom"></div>
+
+  <div class="sw-floating">
+    <a href="#top" title="Back to top">↑</a>
+    <a class="secondary" href="#bottom" title="Go to bottom">↓</a>
+  </div>
 
 </div>
