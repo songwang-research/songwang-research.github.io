@@ -38,12 +38,14 @@ author:
   googlescholar    : # "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : # "https://orcid.org/0009-0000-7572-7800"
+  orcid            : "https://orcid.org/0009-0000-7572-7800"
   semantic         : # URL
   ssrn             : # URL
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
-  scopus           : # URL
+  scopus           : "https://www.scopus.com/authid/detail.uri?authorId=59358445800"
+  webofscience     : "https://www.webofscience.com/wos/author/record/PHO-3537-2026"
+  wos              : "https://www.webofscience.com/wos/author/record/PHO-3537-2026"
   zotero           : # URL
 
 
@@ -148,9 +150,14 @@ og_description           :  # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  type                   : Person
+  name                   : "Song Wang"
   links: # An array of links to social media profiles
+    - "https://orcid.org/0009-0000-7572-7800"
+    - "https://www.scopus.com/authid/detail.uri?authorId=59358445800"
+    - "https://www.webofscience.com/wos/author/record/PHO-3537-2026"
+    - "https://ieeexplore.ieee.org/author/704888443148980"
+    - "https://songwang-research.github.io"
 
 
 # Analytics
