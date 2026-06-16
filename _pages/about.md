@@ -1,4 +1,5 @@
 ---
+layout: archive
 permalink: /
 title: "Hi, "
 author_profile: true
@@ -13,6 +14,7 @@ html {
 }
 
 .sw-page {
+  width: 100%;
   max-width: 880px;
   margin: 0 auto;
   color: #2f3437;
@@ -29,12 +31,12 @@ html {
 }
 
 .sw-hero {
-  margin: 8px 0 26px 0;
-  padding: 26px 28px;
-  border-radius: 22px;
+  margin: 10px 0 28px 0;
+  padding: 30px 34px;
+  border-radius: 24px;
   background: linear-gradient(135deg, #f8fafc 0%, #eef7fb 48%, #ffffff 100%);
-  border: 1px solid #e5edf3;
-  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e6eef3;
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.10);
 }
 
 .sw-kicker {
@@ -49,8 +51,8 @@ html {
 .sw-hero h1 {
   margin: 0 0 12px 0;
   color: #2f3437;
-  font-size: 34px;
-  line-height: 1.18;
+  font-size: 36px;
+  line-height: 1.2;
 }
 
 .sw-hero p {
@@ -94,20 +96,31 @@ html {
   color: #2f3437;
 }
 
-.sw-profile-pills {
-  margin-top: 8px;
+.sw-profile-pills,
+.sw-link-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
 }
 
-.sw-profile-pills a {
-  display: inline-block;
-  margin: 5px 7px 5px 0;
-  padding: 6px 11px;
+.sw-profile-pills a,
+.sw-link-pills a {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
   border-radius: 999px;
-  background: #eef7fb;
+  background: #f8fafc;
   color: #2f80a0 !important;
   font-size: 13px;
   font-weight: 800;
   border: 1px solid #dbeaf0;
+}
+
+.sw-profile-pills a:hover,
+.sw-link-pills a:hover {
+  background: #eef7fb;
+  text-decoration: none;
 }
 
 .sw-nav {
@@ -135,6 +148,11 @@ html {
   border: 1px solid #e5e7eb;
 }
 
+.sw-nav a:hover {
+  background: #eef7fb;
+  text-decoration: none;
+}
+
 .sw-section-title {
   margin-top: 38px;
   margin-bottom: 16px;
@@ -152,11 +170,12 @@ html {
 }
 
 .sw-card,
-.sw-news-card {
-  border-radius: 17px;
+.sw-news-card,
+.sw-link-panel {
+  border-radius: 18px;
   background: #ffffff;
   border: 1px solid #edf2f7;
-  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.055);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
 }
 
 .sw-card {
@@ -211,6 +230,32 @@ html {
   font-weight: 900;
 }
 
+.sw-link-panel {
+  padding: 8px 22px 4px 22px;
+}
+
+.sw-link-block {
+  padding: 16px 0 18px 0;
+  border-bottom: 1px solid #eef2f6;
+}
+
+.sw-link-block:last-child {
+  border-bottom: none;
+}
+
+.sw-link-block h3 {
+  margin: 0 0 4px 0;
+  color: #2f3437;
+  font-size: 17px;
+}
+
+.sw-link-desc {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
 .sw-note-box {
   margin-top: 16px;
   padding: 16px 18px;
@@ -255,11 +300,11 @@ html {
   }
 
   .sw-hero {
-    padding: 22px;
+    padding: 24px;
   }
 
   .sw-hero h1 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .sw-nav {
@@ -268,6 +313,10 @@ html {
 
   .sw-grid {
     grid-template-columns: 1fr;
+  }
+
+  .sw-link-panel {
+    padding: 6px 18px 2px 18px;
   }
 
   .sw-floating {
@@ -432,45 +481,49 @@ html {
 
   <h2 class="sw-section-title" id="quick-links">Quick Links</h2>
 
-  <div class="sw-grid">
-    <div class="sw-card">
-      <h3>IEEE</h3>
-      <ul class="sw-list">
-        <li><a href="https://www.ieee.org/">IEEE</a></li>
-        <li><a href="https://www.computer.org/">IEEE Computer Society</a></li>
-        <li><a href="https://ieee-cas.org/">IEEE Circuits and Systems Society</a></li>
-        <li><a href="https://sscs.ieee.org/">IEEE Solid-State Circuits Society</a></li>
-        <li><a href="https://ieee-ceda.org/">IEEE Council on Electronic Design Automation</a></li>
-      </ul>
+  <div class="sw-link-panel">
+    <div class="sw-link-block">
+      <h3>IEEE Communities</h3>
+      <p class="sw-link-desc">Professional societies and councils related to circuits, systems, computing, and design automation.</p>
+      <div class="sw-link-pills">
+        <a href="https://www.ieee.org/">IEEE</a>
+        <a href="https://www.computer.org/">Computer Society</a>
+        <a href="https://ieee-cas.org/">Circuits and Systems Society</a>
+        <a href="https://sscs.ieee.org/">Solid-State Circuits Society</a>
+        <a href="https://ieee-ceda.org/">CEDA</a>
+      </div>
     </div>
 
-    <div class="sw-card">
-      <h3>IEICE</h3>
-      <ul class="sw-list">
-        <li><a href="https://www.ieice.org/">IEICE</a></li>
-        <li><a href="https://www.ieice.org/iss/iss_r/eng/index.php">Information and Systems Society</a></li>
-        <li><a href="https://www.ieice.org/nolta/index.php">NOLTA Society</a></li>
-        <li><a href="https://www.ieice.org/iss/dc/jpn/">Dependable Computing Technical Committee</a></li>
-        <li><a href="https://globals.ieice.org/">IEICE Digital Library</a></li>
-        <li><a href="https://review.ieice.org/index_e.aspx">IEICE Information on Status of Each Paper</a></li>
-      </ul>
+    <div class="sw-link-block">
+      <h3>IEICE Resources</h3>
+      <p class="sw-link-desc">Japanese academic societies, technical committees, digital libraries, and manuscript-status systems.</p>
+      <div class="sw-link-pills">
+        <a href="https://www.ieice.org/">IEICE</a>
+        <a href="https://www.ieice.org/iss/iss_r/eng/index.php">Information and Systems Society</a>
+        <a href="https://www.ieice.org/nolta/index.php">NOLTA Society</a>
+        <a href="https://www.ieice.org/iss/dc/jpn/">Dependable Computing TC</a>
+        <a href="https://globals.ieice.org/">Digital Library</a>
+        <a href="https://review.ieice.org/index_e.aspx">Paper Status</a>
+      </div>
     </div>
 
-    <div class="sw-card">
+    <div class="sw-link-block">
       <h3>Chiba University</h3>
-      <ul class="sw-list">
-        <li><a href="https://www.chiba-u.ac.jp/">Chiba University</a></li>
-        <li><a href="https://informatics.chiba-u.jp/">Graduate School of Informatics</a></li>
-        <li><a href="https://www.se.chiba-u.jp/">Graduate School of Science and Engineering</a></li>
-        <li><a href="http://www.icsd2.tj.chiba-u.jp/">Kitakami &amp; Namba Laboratory</a></li>
-      </ul>
+      <p class="sw-link-desc">University, graduate schools, and laboratory links.</p>
+      <div class="sw-link-pills">
+        <a href="https://www.chiba-u.ac.jp/">Chiba University</a>
+        <a href="https://informatics.chiba-u.jp/">Graduate School of Informatics</a>
+        <a href="https://www.se.chiba-u.jp/">Graduate School of Science and Engineering</a>
+        <a href="http://www.icsd2.tj.chiba-u.jp/">Kitakami &amp; Namba Laboratory</a>
+      </div>
     </div>
 
-    <div class="sw-card">
+    <div class="sw-link-block">
       <h3>Research Infrastructure</h3>
-      <ul class="sw-list">
-        <li><a href="http://www.vdec.u-tokyo.ac.jp/">VDEC, The University of Tokyo</a></li>
-      </ul>
+      <p class="sw-link-desc">Design and research support infrastructure used in VLSI research.</p>
+      <div class="sw-link-pills">
+        <a href="http://www.vdec.u-tokyo.ac.jp/">VDEC, The University of Tokyo</a>
+      </div>
     </div>
   </div>
 
