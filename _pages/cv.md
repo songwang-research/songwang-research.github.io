@@ -370,11 +370,13 @@ html {
     </li>
     <li>
       <strong>Song Wang</strong>, Xiangqing Wei, Ji Wu, and Kazuteru Namba, “C-Element-Based Latch with DNU Tolerance and SET Resilience Around Clock Edges,”
-      <em>Nonlinear Theory and Its Applications, IEICE</em>, to appear.
+      <em>Nonlinear Theory and Its Applications, IEICE</em>, vol. 17, no. 3, pp. 662–678, 2026.
+      DOI: <a href="https://doi.org/10.1587/nolta.17.662">10.1587/nolta.17.662</a>.
     </li>
     <li>
-      Xiangqing Wei, Ji Wu, <strong>Song Wang</strong>, Yun-Ju Baek, and Kazuteru Namba, “Structure-Aware Tile-Level Scheduling for Irregular CNNs on PE-Array Accelerators,”
-      <em>Nonlinear Theory and Its Applications, IEICE</em>, to appear.
+      Xiangqing Wei, Ji Wu, <strong>Song Wang</strong>, YunJu Baek, and Kazuteru Namba, “Structure-Aware Tile-Level Scheduling for Irregular CNNs on PE-Array Accelerators,”
+      <em>Nonlinear Theory and Its Applications, IEICE</em>, vol. 17, no. 3, pp. 822–840, 2026.
+      DOI: <a href="https://doi.org/10.1587/nolta.17.822">10.1587/nolta.17.822</a>.
     </li>
   </ol>
 
@@ -409,7 +411,7 @@ html {
   <ol class="pub-list">
     <li>
       <strong>Song Wang</strong> and Kazuteru Namba, “A C-Element-Based Latch Design for Flip-Flops with Complete SNU and Partial DNU Tolerance and Enhanced Soft Error Resilience Around Clock Edges,”
-      <em>IEICE Technical Report</em>, DC2024-113, Tokyo, Japan, Feb. 2025.
+      <em>IEICE Technical Report</em>, vol. 124, no. 374, DC2024-113, pp. 43–46, Tokyo, Japan, Feb. 2025.
     </li>
     <li>
       <strong>Song Wang</strong> and Kazuteru Namba, “Critical Charge Measurements Around Falling Edge of Clock Signal for D Flip-Flops,”
